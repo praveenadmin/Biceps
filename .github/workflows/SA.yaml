@@ -11,7 +11,7 @@ permissions:
 jobs:
     
   SA-repo:
-    uses: praveenadmin/BH-Reusable-Templates/.github/workflows/reusable-deploy.yaml@main
+    uses: praveenadmin/BH-Reusable-Templates/.github/workflows/reusable-deploy.yaml
     with:
       branchname: master
       parametersFile: CallerRepo/parameters/SA/sa.parameters.jsonc
