@@ -1,5 +1,6 @@
-name: SA-call
+name: 'SA-call'
 
+# Controls when the workflow will run
 on:
   workflow_dispatch:
 
@@ -8,12 +9,13 @@ permissions:
   contents: read
 
 jobs:
-  call-reusable:
+    
+  SA-repo:
     uses: praveenadmin/BH-Reusable-Templates/.github/workflows/reusable-deploy.yaml@main
     with:
-      templateFile: ./BH-Reusable-Templates/templates/main.bicep
-      parametersFile: ./BH-Reusable-Templates/parameters/storage.json  
+      branchname: master
+      parametersFile: CallerRepo/parameters/SA/sa.parameters.jsonc
       resourceGroup: 
     secrets:
       AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
-      PAT: ${{ secrets.PAT }} 
+      PAT: ${{ secrets.PAT }}
