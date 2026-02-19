@@ -1,0 +1,20 @@
+name: 'SA-call'
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+    
+  SA-repo:
+    uses: praveenadmin/BH-Reusable-Templates/.github/workflows/reusable-deploy.yaml@main
+    with:
+      branchname: master
+      parametersFile: CallerRepo/parameters/SA/sa.parameters.jsonc
+      resourceGroup: 
+    secrets:
+      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
