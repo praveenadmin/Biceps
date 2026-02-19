@@ -14,7 +14,7 @@ jobs:
     uses: praveenadmin/BH-Reusable-Templates/.github/workflows/reusable-deploy.yaml@main
     with:
       parametersFile: CallerRepo/parameters/SA/sa.parameters.jsonc
-      resourceGroup: 
+      resourceGroup: arm-lab-rg
     secrets:
       AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
       PAT: ${{ secrets.PAT }}
