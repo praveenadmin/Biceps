@@ -18,3 +18,4 @@ jobs:
       resourceGroup: 
     secrets:
       AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+      PAT: ${{ secrets.PAT }}
