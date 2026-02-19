@@ -13,7 +13,6 @@ jobs:
   SA-repo:
     uses: praveenadmin/BH-Reusable-Templates/.github/workflows/reusable-deploy.yaml@main
     with:
-      
       parametersFile: CallerRepo/parameters/SA/sa.parameters.jsonc
       resourceGroup: 
     secrets:
